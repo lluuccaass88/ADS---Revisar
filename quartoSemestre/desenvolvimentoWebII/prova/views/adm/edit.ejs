@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %> 
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <div class="corpo">
+        <div class="area1">
+            <a href="/home"><h1>TÍTULO DO BLOG</h1></a>
+        </div>
+        <div class="area2 maior">
+            <form action="/administracao/<%= post._id %>?_method=PUT" method="POST" style="margin-left: 10px">
+                <h2>Cadastrar Novo Artigo</h2>
+                <label for="titulo">Titulo:</label>
+                <br>
+                <input value="<%= post.title %>" type="text" name="title" style="width: 95%;">
+                <br>
+                <label for="image">Imagem:</label>
+                <br>
+                <input value="<%= post.image %> " type="text" name="image" style="width: 95%;">
+                <br>
+                <label for="Texto">Texto:</label>
+                <br>
+                <textarea name="text" id="" cols="30" rows="5" style="width: 95%;"><%= post.text %> </textarea>
+                <button style="margin-top: 10px;" class="direita">Salva</button>
+            </form>
+            <button style="margin-top: 10px;" onclick="window.location.href='/administracao'" class="esquerda">Cancelar</button>
+            <br>
+            <form action="/administracao/<%=post._id%>?_method=DELETE" method='post'>
+                <button class="apagar">Apagar</button>
+            </form>   
+        </div>
+        <div class="area3">
+            <span><strong>Lucas Alves</strong></span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %> 
+    <link rel="stylesheet" href="/css/Users/New.css">
+    <script type="text/javascript" src="/js/form-cidades.js"></script>
+    <script type="text/javascript" src="/js/valida-cadastro.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="container header">
+            <div class="col-12">
+                <img src="../images/banner_register.svg" alt="" srcset="" class="banner-header">
+            </div>
+        </div>
+    </header>
+    <h1>Vamos nos conhecer melhor</h1>
+    
+    <div id="container_form">
+        <form onSubmit="return validaForm()" action="/ajudaAi/newUser" method="POST">
+            <div class="lado_a_lado">
+                <label for="">Nome:</label>
+                <input id="nome" type="text" name="nome" required>
+                <label for="">Sobrenome:</label>
+                <input id="sobrenome" type="text" name="sobrenome" required>
+            </div>
+            
+            <div class="lado_a_lado">
+                <label for="">Data de nascimento: </label>
+                <input id="data" type="date" name="nascimento" required>
+                <label for="">Telefone: </label>
+                <input id="numero" type="number" name="telefone" required>
+            </div>
+    
+            <div class="lado_a_lado">
+                <label for="">E-mail:</label>
+                <input id="email" type="email" name="email" required>
+                <label for="username">Nome de usuário:</label>
+                <input id="username" type="text" name="username" required> 
+            </div>
+
+            <div class="lado_a_lado">
+                <label for="password">Senha: </label>
+                <input id="password" type="password" name="password" required>
+                <label for="password-repeat">Repita a senha: </label>
+                <input id="password-repeat" type="password" required>
+            </div>
+
+            <button id="btn-env" class="btn-ajuda btn-danger" value="Registrar">Registrar</button>
+        </form>
+    </div>
+    
+    <%- include('../partials/footer.ejs') %> 
+    </body>
+</html>

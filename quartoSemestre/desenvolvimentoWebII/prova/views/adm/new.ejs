@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %> 
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <div class="corpo">
+        <div class="area1">
+            <a href="/home"><h1>TÍTULO DO BLOG</h1></a>
+        </div>
+        <div class="area2 maior">
+            <form action="/administracao/new" method="post" style="margin-left: 10px">
+                <h2>Cadastrar Novo Artigo</h2>
+                <label for="titulo">Titulo:</label>
+                <br>
+                <input type="text" name="title" style="width: 95%;">
+                <br>
+                <label for="image">Imagem:</label>
+                <br>
+                <input type="text" name="image" style="width: 95%;">
+                <br>
+                <label for="Texto">Texto:</label>
+                <br>
+                <textarea name="text" id="" cols="30" rows="5" style="width: 95%;"></textarea>
+                <button style="margin-top: 10px;" class="direita">Salvar</button>
+            </form>
+            <button style="margin-top: 10px;" onclick="window.location.href='/administracao'" class="esquerda">Cancelar</button>
+        </div>
+        <div class="area3">
+            <span><strong>Lucas Alves</strong></span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,279 @@
+body{
+    background-color: #FFE8E8;
+}
+
+header{
+    background-color: white;
+    padding-top: 10px;
+}
+
+
+/*Formulario*/
+#container_form{
+    background-color: #FFE8E8;
+    display: flex;
+    justify-content: center;
+}
+
+form{
+    width: 60%;
+    margin-left:2% ;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    padding-left: 2%;
+}
+
+input{
+    border-radius: 30px;
+    border: 2px solid rgb(204, 68, 68);
+    height:22px;
+    font-size: 15px;
+}
+
+select{
+    border-radius: 30px;
+    border: 2px solid rgb(204, 68, 68);
+    height:22px;
+    font-size: 15px;
+}
+
+.lado_a_lado{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    display: flex;
+    flex-direction: row;
+}
+
+
+#rua{
+    margin-right: 2%;
+    margin-left: 0.5%;
+    width: 35%;
+}
+
+#numero_casa{
+    margin-left: 0.5%;
+    width: 15%;
+    margin-right: 2%;
+}
+
+#bairro{
+    margin-left: 0.5%;
+    width: 35%;
+    margin-right: 4%;
+}
+
+#estado{
+        margin-left: 0.5%;
+        width: 40%;
+        margin-right: 2%;    
+}
+
+#invisivel{
+    display:none;
+}
+
+#cep{
+    margin-left: 0.5%;
+    width: 40%;
+}
+
+#pagamento{
+    width: 98%;
+}
+
+textarea{
+    border: 2px solid rgb(204, 68, 68);
+    width: 95%;
+    height:162px;
+    border-radius: 10px;
+}
+
+#password{
+    margin-left: 0.5%;
+    margin-right: 2%;
+}
+
+#password-repeat{
+    margin-left: 0.5%;
+    margin-right: 2%;
+}
+
+#btn-env{
+   font-size: 20px;
+   padding: 1%;
+   margin-top: 2%;
+   margin-bottom: 2%;
+   border-radius: 30px;
+}
+
+/*Tela de 1000px*/
+@media only screen and (max-width: 1000px) {
+    form{
+        width: 80%;
+    }
+}
+
+/*Tela de 900px*/
+@media only screen and (max-width: 900px) {
+    #banner-header{
+        height: 300px;
+    }
+    #cidade{
+        width: 35%;
+    }
+}
+
+/*Tela de 700px*/
+@media only screen and (max-width: 700px) {
+    form{
+        width: 100%;
+    }
+
+}
+
+/*Tela de 500px*/
+@media only screen and (max-width: 500px) {
+    #banner-header{
+        background-size: 42%;
+        height: 200px;
+    }
+
+    #nome{
+        width: 90%;
+    }
+
+    #email{
+        width: 90%;
+    }
+
+    #username{
+        width: 90%;
+    }
+
+    #password{
+        width: 90%;
+    }
+
+    #password-repeat{
+        width: 90%;
+    }
+
+    #data{
+        width: 35%;
+    }
+
+    #numero{
+        width: 40%;
+    }
+
+    #bairro{
+        width: 40%;
+    }
+
+    #rua{
+        width: 40%;
+    }
+
+    #numero_casa{
+        width: 20%;
+    }
+
+    .lado_a_lado{
+        display: flex;
+        flex-direction: column;
+    }
+
+    form{
+        padding-left: -2%;
+        padding-right: 2%;
+    }
+}
+
+/*Tela de 350px*/
+@media only screen and (max-width: 350px) {
+    #banner-header{
+        background-size: 60%;
+        height: 200px;
+    }
+
+    #nome{
+        width: 95%;
+    }
+
+    #email{
+        width: 95%;
+    }
+
+    #username{
+        width: 95%;
+    }
+
+    #password{
+        width: 95%;
+    }
+
+    #password-repeat{
+        width: 95%;
+    }
+
+    #data{
+        width: 44%;
+    }
+
+    #numero{
+        width: 50%;
+    }
+
+    #bairro{
+        width: 65%;
+    }
+
+    #rua{
+        width: 65%;
+    }
+
+    #numero_casa{
+        width: 25%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Tela de 1000px*/
+@media only screen and (max-width: 1030px) {
+
+}
+    
+
+/*Tela de 900px*/
+@media only screen and (max-width: 900px) {
+  
+}
+
+/*Tela de 770px*/
+@media only screen and (max-width: 770px) {
+    
+}
+
+/*Tela de 550px*/
+@media only screen and (max-width: 550px) {
+
+}
+
+
+/*Tela de 400px*/
+@media only screen and (max-width: 400px) {
+
+}
+

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %> 
+    <link rel="stylesheet" href="/css/global.css">
+</head>
+<body>
+    <div class="corpo">
+        <div class="area1">
+            <a href="/home"><h1>TÍTULO DO BLOG</h1></a>
+        </div>
+        <div class="area2">
+            <p class="data"><%= datePosts %> </p>
+            <a href="show/<%= post._id %>"><h2><%= post.title %> </h2></a>
+            <div style="white-space: pre-line; border: none;">
+                <img src="/images/<%= post.image %> " class="figureShow">
+                <p><%= post.text %> </p>
+                <a href="/" ><strong class="direita" style="color: black;">VOLTAR</strong></a>
+                <hr>
+            </div>
+            <form action="/home/<%= post._id %>?_method=PUT" method="POST" style="margin-bottom: 30px;">
+                <strong>DEIXE SEU COMENTÁRIO:</strong>
+                <br>
+                <textarea name="text" placeholder="Digite aqui seu cometário" name="" id="" cols="20" rows="5" style="width: 98%;"></textarea>
+                <br>
+                <input name="name" type="text" placeholder="Digite aqui seu nome" style="width: 98%;">    
+                <br>
+                <button class="direita" style="color: black; margin-top: 10px;">ENVIAR</button>
+            </form>
+            
+            <div class="areaComentarios">
+                <strong>COMENTÁRIOS</strong>
+                <% let i = 0 %> 
+                <% while(i < post.comments.length){%>
+                    <% if(i%2 == 0){ %>
+                        <p style="color: rgb(137, 175, 245);"><%= post.comments[i].name %><span style="margin-left: 0px; color:black"> - <%= post.comments[i].dateComments %></span></p>
+                        <p style="margin-bottom: 10%;"><%= post.comments[i].text %> </p>
+                    <% } %>  
+                    <% i++ %> 
+                <% } %>  
+            </div>
+        </div>
+        <div class="area3">
+            <span><strong>Lucas Alves</strong></span>
+        </div>
+    </div>
+</body>
+</html>

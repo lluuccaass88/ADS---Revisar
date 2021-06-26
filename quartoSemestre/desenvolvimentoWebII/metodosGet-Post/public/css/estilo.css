@@ -1,0 +1,50 @@
+/*Global*/
+h1{
+    text-align: center;
+}
+.container{
+    margin: auto;
+}
+
+.card{
+    background-color: rgb(243, 243, 243);
+    margin-top: 20px;
+}
+
+.preco{
+    color: red;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.btn-comprar{
+    width: 38%;
+    font-size: 15px;
+    padding: 12px;
+}
+
+.btn-carrinho{
+    width: 60%;
+    font-size: 15px;
+    padding: 1px;
+}
+
+/*Pag confirmação de venda*/
+
+
+.img-venda{
+    height: 200px;
+    max-height: 200px;
+}
+
+form{
+    width: 100%;
+}
+
+.img-compra{
+    max-height: 300px;
+}
+
+.btnCarrinho{
+    width: 100%;
+}

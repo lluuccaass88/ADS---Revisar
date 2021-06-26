@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %> 
+    <link rel="stylesheet" href="/css/Logado/home.css">
+    
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.min.css"/>
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/navBar.ejs') %> 
+        <div class="container header">
+            <div class="col-12">
+                <img src="../images/bannerHome.svg" alt="" srcset="" class="banner-header">
+            </div>
+        </div>
+    </header>
+    
+    <%= console.log("OI") %> 
+
+    <h1>Ajuda ai!</h1> 
+    <div  id="areaAjuda" class="container">  
+          <!--Wanna Call Someone :P -->
+        <% for (pedido of pedidos) { %>
+
+                <div class="media block-update-card ">
+                    <a class="" href="/ajudaAi/dadosPedido/<%= pedido.aux._id %>/<%= pedido.aux.idUsuario%>">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-3">
+                                    <img id="img" src="http://3.bp.blogspot.com/-IbEOTNtCMyU/TfCAdHaAxEI/AAAAAAAAA8U/EATib38SSAM/s320/joe-mcelderry.jpg" alt="...">
+                                </div>
+                                <div class="infos col-9">
+                                   <h4>Nome: <span><%= pedido.nome %> <%= pedido.sobrenome %>  </span></h4>
+                                    <h4>Estado: <span><%= pedido.aux.estado %> </span></h4>
+                                    <hr>
+                                </div>
+                            </div>
+                            <div id="descricao">
+                                <h4>Descrição:</h4>
+                                <p><%= pedido.aux.descricao %> </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>  
+        <% } %>
+
+    </div>
+
+    <%- include('../partials/footer.ejs') %> 
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<script>
+    var count = 30;
+    var tempo = document.getElementById("tempo"); // associar a variável tempo ao elemento
+
+    function start() {
+        if (count > 0){
+            count -= 1;
+            if (count == 0) {
+                count = "Atualizado";
+                document.getElementById('alerta').style.visibility = "hidden";
+            }else if(count < 10){
+                count = "0" + count;
+            }
+            setTimeout(start, 100); 
+        }
+    }
+    start(); 
+</script>
+
+<div class="alert alert-success" role="alert" id="alerta">
+    Postagem salva com sucesso
+</div>

@@ -1,0 +1,35 @@
+<%- include('../partials/head.ejs') %> 
+
+<body>
+    <%- include('../partials/navbar.ejs') %> 
+    <% if(novo == 1){ %>
+        <%- include('../partials/alert.ejs')  %>
+    <% } %>  
+     
+    <h1>Postagens: </h1>
+    <% if(postagens.length > 0){ %>
+        <div class="container">
+            <div class="row align-items-start">
+                <% for(postagem of postagens){ %>
+                    <div class="col-4">
+                        <div class="card" style="width: 16rem;">
+                            <div class="card-body">
+                                <a href="/postagens/<%=postagem.id%>"><h5 class="card-title"><%= postagem.titulo %></h5></a>
+                                <p class="card-text"><%= postagem.descricao %></p>
+                                <span class="card-text">#<%= postagem.categoria %></span>
+                                <br>
+                                <a href="/postagens/<%= postagem.id %> /edit" class="btn btn-success ">Editar </a>
+                                <form action="/postagens/<%=postagem.id%>?_method=DELETE" method='post'>
+                                    <button class="btn btn-success ">Apagar</button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>  
+                <% } %>
+            </div>
+        </div>  
+    <% }else{ %>
+        <h2>Nem uma postagem encontrada!</h2>
+    <% } %>      
+</body>
+</html>

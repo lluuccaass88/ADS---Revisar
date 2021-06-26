@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %> 
+    <link rel="stylesheet" href="/css/Logado/dadosPedido.css">
+</head>
+
+<body>
+    <header>
+        <%- include('../partials/navBar.ejs') %> 
+        <div class="container header">
+        </div>
+    </header>
+    
+    <h1>Obrigado pela a sua ajuda!</h1>
+    <div id="dados">
+        <h2>Dados para ajudar:</h2>
+        <p><strong>Nome:</strong><a href="/ajudaAi/perfil/<%= usuario._id %>"> <%=usuario.nome%> <%=usuario.sobrenome%> </a></p>
+        <div id="lado-lado">
+            <p><strong>Rua:</strong> <%=pedido.rua%> </p>
+            <p><strong>Numero da casa: </strong><%=pedido.numero_casa%></p>
+            <p><strong>Bairro: </strong><%=pedido.bairro%></p>
+        </div>
+        <p><strong>Telefone: </strong><%=usuario.telefone%></p>
+        <p><strong>E-mail:</strong> <%=usuario.email%></p>
+        <p><strong>Pix:</strong> <%=pedido.pagamento%> </p>
+        <p><strong>Descrição:</strong></p>
+        <p><%=pedido.descricao%></p>
+    </div> 
+
+ 
+    <%- include('../partials/footer.ejs') %> 
+    </body>
+</html>

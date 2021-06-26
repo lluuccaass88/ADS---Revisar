@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head.ejs') %> 
+</head>
+<body>
+    <div class="corpo">
+        <div class="area1">
+            <a href="/home"><h1>TÍTULO DO BLOG</h1></a>
+        </div>
+        <div class="area2">
+            <h2>Administração do blog</h2>
+            <button onclick="window.location.href='/administracao/new'">Cadastrar novo artigo</button>
+            <p>Edite e apague seus artigos:</p>
+            <ul>
+                <% for(artigo of artigos){ %> 
+                    <li><a href="/administracao/<%= artigo._id %>/edit"><%= artigo.title %></a></li>
+                <% } %> 
+            </ul>
+            <button onclick="window.location.href='/logout'">Logout</button>
+        </div>
+        <div class="area3">
+            <span><strong>Lucas Alves</strong></span>
+        </div>
+    </div>
+</body>
+</html>

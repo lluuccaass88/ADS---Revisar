@@ -1,0 +1,60 @@
+<%- include('../partials/head.ejs') %> 
+
+<body>  
+    <form class="form-horizontal " action="/postagens/<%=postagem.id%>?_method=PATCH"  method="post">
+        <fieldset>
+    
+        <!-- Form Name -->
+        <legend>Form Name</legend>
+        
+        <!-- Text input-->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="titulo">Titulo</label>  
+          <div class="col-md-4">
+          <input  id="titulo" name="titulo" type="text" placeholder="Titulo" class="form-control input-md" required="" value="<%= postagem.titulo %> ">
+            
+          </div>
+        </div>
+        
+        <!-- Select Basic -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="categoria">Categoria</label>
+          <div class="col-md-4">
+            <select  id="categoria" name="categoria" class="form-control" value="<%= postagem.categoria %>" selected>
+              <option value="Finanças">Finanças</option>
+              <option value="Programação">Programação</option>
+              <option value="Desenvolvimento Pessoal">Desenvolvimento Pessoal</option>
+              <option value="Cinema">Cinema</option>
+            </select>
+          </div>
+        </div>
+        
+        <!-- Textarea -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="texto">Texto</label>
+          <div class="col-md-4">                     
+            <textarea class="form-control" id="texto" name="texto" readonly><%= postagem.texto %> </textarea>
+          </div>
+        </div>
+        
+        <!-- Textarea -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="descricao">Descrição</label>
+          <div class="col-md-4">                     
+            <textarea class="form-control" id="descricao" name="descricao" readonly><%= postagem.descricao %> </textarea>
+          </div>
+        </div>
+        
+        <!-- Button -->
+        <div class="form-group">
+          <label class="col-md-4 control-label" for="editar"></label>
+          <div class="col-md-4">
+            <button id="enviar" name="editar" class="btn btn-success">editar</button>
+          </div>
+        </div>
+        
+        </fieldset>
+        </form>
+        
+</body>
+</html>

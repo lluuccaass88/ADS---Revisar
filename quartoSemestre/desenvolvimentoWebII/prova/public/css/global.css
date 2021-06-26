@@ -1,0 +1,98 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+span{  
+    margin-left: 80%;
+}
+
+div{
+    border: 10px solid #cccccc;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+}
+
+/* Pesquisar por estilos de hr pra fazer igual o sor */
+/* <% var textoQuebrado = artigo.texto.replace('\n', '<br><br>'); %> 
+
+            <p><%- textoQuebrado %></p> */
+/* quebrar linha */
+
+a:hover{
+    color: black;
+}
+
+.corpo{
+    margin: auto;
+    border: none;
+    width: 50%;
+}
+
+.area1{
+    background-color: #cccccc;
+}
+
+.area2{
+    margin: 10px auto 10px auto;
+    padding: 5px;
+}
+
+.area3{
+    padding: 2%;
+    background-color: #cccccc;
+}
+
+.direita{
+    float: right;
+    color: green;
+}
+
+.esquerda{
+    float: left;
+    color: red;
+}
+
+.apagar{
+    margin-top: 16px;
+    margin-left: -11.9%;
+    color: red;
+}
+
+.maior{
+    padding-bottom: 50px;
+}
+
+.figure {
+    float: right;
+    margin: 0 0 10px 10px;
+  }
+
+.figureShow{
+    float: left;
+    margin: 0 10px 10px 10px;
+    width: 55%;
+}
+
+hr{
+    border: 0;
+    height: 2px;
+    background-image: linear-gradient(to right, transparent, #CCC, transparent);  
+  }
+
+  .areaComentarios{
+      border: none;
+      margin-left: 10px;
+  }
+
+  .data{
+      margin-left: auto;
+    font-size: 15px;
+    color: rgb(137, 175, 245);
+}

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %> 
+<body>
+    <%- include('partials/navbar')  %> 
+    <h1>Obrigado pelo seu pedido!:</h1>
+    <div class="container">
+        <p><strong>Nome: </strong><%= inputNome %></p> 
+        <p><strong>Email: </strong><%= inputEmail %> </p>
+        <p><strong>Endereço: </strong><%= inputEndereco %> </p>
+        <p><strong>Complemento: </strong><%= inputComplemento %> </p>
+        <p><strong>Cidade: </strong><%= inputCidade %></p>
+        <p><strong>Estado: </strong><%= inputEstado %></p>
+        <p><strong>Cep: </strong><%= inputCep %> </p>
+        <p><strong>Quantidade: </strong><%= inputQuantidade %> </p>
+    </div>
+</body>

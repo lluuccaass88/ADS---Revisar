@@ -1,0 +1,113 @@
+header{
+    background-color: #FFE8E8;
+}
+
+/*Editando a area de ajuda*/
+#areaAjuda{
+    width: 100%;
+    justify-content: center;
+    background-color: #FFE8E8;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow:scroll; 
+    height: 720px;
+  
+}
+
+/* cartão */
+.block-update-card {
+    overflow:scroll; 
+    overflow: hidden;
+    width: 48%;
+    max-height: 300px; 
+    min-height: 300px;
+    border: 1px #FFFFFF solid;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0;
+    box-shadow: 1px 1px 8px #d8d8d8;
+    background-color: #FFFFFF;
+  }
+  
+#img{
+    border-radius: 50%;
+    width: 95%;
+    height: 90%;
+    margin-top: 2%;
+    margin-left: 2%;
+}  
+
+.infos{
+    padding-top: 3%;
+    text-decoration: none;
+}
+
+span{
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    cursor:pointer;
+}
+
+a:hover{
+    color: black;
+}
+
+/*Tela de 1200px*/
+@media only screen and (max-width: 1200px) {
+    #areaAjuda{
+        width: 100%;
+        height: 800px;
+    }
+
+    .block-update-card {
+        width: 90%;
+      }
+
+    #img{
+        width: 75%;
+        height: 85%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }  
+}
+
+/*Tela de 1000px*/
+@media only screen and (max-width: 1030px) {
+
+}
+
+/*Tela de 900px*/
+@media only screen and (max-width: 900px) {
+
+
+}
+
+/*Tela de 770px*/
+@media only screen and (max-width: 770px) {
+    #img{
+        width: 90%;
+        height: 85%;
+        margin-top: 2%;
+        margin-left: 2%;
+    }  
+}
+
+/*Tela de 550px*/
+@media only screen and (max-width: 550px) {
+
+}
+
+/*Tela de 400px*/
+@media only screen and (max-width: 400px) {
+ 
+}
+

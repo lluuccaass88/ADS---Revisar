@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('./partials/head.ejs') %> 
+</head>
+<body>
+    <div class="corpo">
+        <div class="area1">
+            <a href="/home"><h1>TÍTULO DO BLOG</h1></a>
+        </div>
+        <div class="area2">
+            <% for (post of posts) { %>
+                <span class="data"><%= datePosts %> </span>
+                <a href="show/<%= post._id %>"><h2><%= post.title %> </h2></a>
+                <div style="white-space: pre-line; border: none;">
+                    <img src="/images/<%= post.image %> " class="figure">
+                    <p><%= post.text %> </p>
+                    <hr>
+                </div>
+            <% } %>
+        </div>
+        <div class="area3">
+            <span><strong>Lucas Alves</strong></span>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('partials/header') %> 
+<body>
+    <%- include('partials/navbar')  %> 
+    <h1>Confirmar compra</h1>
+
+    <div class="container">
+        <div class="row align-items-start">
+          <div class="col">
+            
+            <form action="/mostrarDados" class="row g-3 m-2" method="post">
+                <div class="col-md-6">
+                  <label for="inputEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="inputEmail" name="inputEmail" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputNome" class="form-label">Nome</label>
+                  <input type="text" class="form-control" id="inputNome" name="inputNome" required>
+                </div>
+                <div class="col-12">
+                  <label for="inputEndereco" class="form-label">Endereço</label>
+                  <input type="text" class="form-control" id="inputEndereco" placeholder="Padre Reus, 686" name="inputEndereco" required>
+                </div>
+                <div class="col-12">
+                    <label for="inputComplemento" class="form-label">Complemento</label>
+                    <input type="text" class="form-control" id="inputComplemento" placeholder="Apartamento, casa, studio" name="inputComplemento" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCidade" class="form-label">Cidade</label>
+                  <input type="text" class="form-control" id="inputCidade" name="inputCidade" required>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputEstado" class="form-label">Estado</label>
+                  <select id="inputEstado" class="form-select" name="inputEstado" required>
+                    <option selected>Escolha seu estado</option>
+                    <option>Rio Grandeo do Sul</option>
+                    <option>Santa Catarina</option>
+                    <option>Parana</option>
+                  </select>
+                </div>
+                <div class="col-md-6">
+                  <label for="inputCep" class="form-label">Cep</label>
+                  <input type="text" class="form-control" id="inputCep" name="inputCep" required>
+                </div>
+                <div class="col-2">
+                    <label for="inputQuantidade" class="form-label">Quantidade</label>
+                    <input id="qtd" type="number" class="form-control" id="inputQuantidade" placeholder="0" name="inputQuantidade" min="1" min="10" required>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-danger" href="#" id="confirmarCompra">Confirmar Comprar</button>
+                </div>
+              </form>
+
+          </div>
+          <div class="col">
+            
+            <div class="col">
+                <div class="card" style="width: 20rem;">
+                        <img src="<%=l%>" class="card-img-top img-thumbnail img-compra" alt="...">
+                        <div class="card-body">
+                        <h5 class="card-title"><%= q %> </h5>
+                        <p class="card-text preco">R$<%= p %> </p>
+                    </div>
+                </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+</body>
