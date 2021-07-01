@@ -68,22 +68,17 @@ public class Lista {
 	}
 	
 	void remove(int pos) {
+		
 		int contAux = 0;
-		
-		for(int cont = 0; cont < this.tamVetor; cont++) { //Tranfere o conteúdo do vetorAux para o vetor
-			this.vetorAux[cont] = this.vetor[cont]; 
-		}
-		
-		for(int cont = 0; cont < this.tamVetor; cont++) {//Tranfere o conteúdo do vetorAux para o vetor
-			if(cont == pos) {
-				contAux++;
-				this.vetor[cont] = this.vetorAux[contAux];
-				contAux++;
-			}else {
-				this.vetor[cont] = this.vetorAux[contAux];
+			
+			for(int cont = 0; cont < this.tamVetor; cont++){
+				if(cont == pos) {
+					contAux++;
+				}
+				this.vetor[cont] = this.vetor[contAux];
 				contAux++;
 			}
-		}
+			this.tamVetor--;
 		
 		this.tamVetor--;
 	}
