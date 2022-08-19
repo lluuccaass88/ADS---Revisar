@@ -6,3 +6,4 @@ Repositório com os códigos desenvolvidos durante o curso de **ADS (Análise e 
 * Programação Orientado a Objeto (POO) - 3° Semestre;
 * Estrutura de Dados - 3° Semestre;
 
+- Verificar depois os códigos e as pastas
